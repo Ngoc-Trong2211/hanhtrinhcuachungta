@@ -5,7 +5,7 @@ async function hashSHA256(text) {
     return ha.map(b => b.toString(16).padStart(2, '0')).join('');
   }
 
-  const ch = "9bf72d8a19d77b13fa3dbe67726d5ef7967b9c46038103ed528956b18ae18001";
+  const ch = "1000e519b2223ce141fc54dc33a35c603ab7e1b2b41f137217d4673202012743";
 
   document.getElementById("login-form").addEventListener("submit", async function (e) {
     e.preventDefault();
@@ -14,6 +14,6 @@ async function hashSHA256(text) {
 
     if (inputHash === ch) {
       document.getElementById("login-form").classList.add("hidden");
-      document.getElementById("news-board").classList.remove("hidden");
+      document.getElementById("board").classList.remove("hidden");
     }
   });
