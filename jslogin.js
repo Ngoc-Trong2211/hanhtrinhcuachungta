@@ -29,8 +29,9 @@ document.getElementById("confirm").addEventListener("click", function (e) {
 document.getElementById("sayno").addEventListener("click", function (e) {
   e.preventDefault();
   document.getElementById("confirm-form").parentElement.classList.add("hidden");
-  document.getElementById("confirm-form-v2").parentElement.classList.add("hidden");
+  document.getElementById("confirm-form-v2").parentElement.classList.remove("hidden");
   setTimeout(() => {
     document.getElementById("confirm-form").parentElement.classList.remove("hidden");
-  }, 10000);
+    document.getElementById("confirm-form-v2").parentElement.classList.add("hidden");
+  }, 5000);
 });
